@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI心理咨询师</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 主聊天区域 -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <h1>AI心理咨询师</h1>
+                <p class="stage-desc">建立信任关系，了解基本情况</p>
+                <div id="stageIndicator" class="stage-indicator">初始阶段</div>
+                <div class="header-buttons">
+                    <button id="exportButton" title="导出聊天记录">
+                        <span class="icon">📥</span>
+                    </button>
+                    <button id="clearButton" title="清除聊天记录">
+                        <span class="icon">🗑️</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 进度指示器 -->
+            <div class="progress-indicator" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+                <div class="progress-steps">
+                    <div class="progress-step">
+                        <div class="step-dot active" aria-label="初始接触阶段"></div>
+                        <div class="step-label active">初始接触</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" aria-label="问题评估阶段"></div>
+                        <div class="step-label">问题评估</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" aria-label="目标设定阶段"></div>
+                        <div class="step-label">目标设定</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" aria-label="干预阶段"></div>
+                        <div class="step-label">干预阶段</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-dot" aria-label="总结结束阶段"></div>
+                        <div class="step-label">总结结束</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chatMessages" class="chat-messages"></div>
+            
+            <!-- 状态指示器 -->
+            <div id="statusIndicator" class="status-indicator" style="display: none;">
+                <div class="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+                <span>AI正在思考...</span>
+            </div>
+            
+            <div class="input-area">
+                <textarea id="messageInput" placeholder="请输入您想说的话..."></textarea>
+                <div class="button-group">
+                    <button id="voiceInputBtn" title="语音输入">
+                        <span class="icon">🎤</span>
+                    </button>
+                    <button id="sendButton">发送</button>
+                </div>
+                <div id="voiceStatus" class="voice-status" style="display: none;">
+                    <span class="recording-indicator"></span>
+                    <span class="status-text">正在聆听...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 信息面板 -->
+        <div class="info-panel">
+            <!-- 情绪分析 -->
+            <div id="emotionDisplay" class="info-section">
+                <h3>情绪分析</h3>
+                <div class="emotion-details">
+                    <div class="emotion-indicator">
+                        <span class="emotion-icon">😊</span>
+                        <span class="emotion-text">当前情绪: 平静</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 干预策略 -->
+            <div id="interventionDisplay" class="info-section">
+                <h3>干预策略</h3>
+                <div class="strategy-details">
+                    <!-- 动态内容 -->
+                </div>
+            </div>
+
+            <!-- 会话质量 -->
+            <div id="qualityDisplay" class="info-section">
+                <h3>会话质量</h3>
+                <div class="quality-details">
+                    <!-- 动态内容 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

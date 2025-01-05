@@ -1,0 +1,9 @@
+psychological-counselor/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── chat.js
+│   └── api.js
+└── assets/
+    └── images/ 
